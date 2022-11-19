@@ -3,6 +3,8 @@ import React from 'react';
 import { useNavigation } from '@react-navigation/native';
 import { COLORS, SHADOWS, SIZES, assets } from '../constants';
 import { CircleButton } from '../components/Button';
+import { SubInfo, EthPrice, NFTtitle } from './SubInfo';
+
 const NFTCard = ({ data }) => {
   return (
     <View
@@ -27,7 +29,16 @@ const NFTCard = ({ data }) => {
         />
         <CircleButton imgUrl={assets.heart} right={10} top={10} />
       </View>
-      <Text>NFT</Text>
+      <SubInfo />
+
+      <View style={{ padding: SIZES.font }}>
+        <NFTtitle
+          title={data.name}
+          subTitle={data.creator}
+          titleSize={SIZES.large}
+          subTitleSize={SIZES.small}
+        />
+      </View>
     </View>
   );
 };
