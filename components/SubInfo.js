@@ -131,11 +131,3 @@ export const SubInfo = () => {
     </View>
   );
 };
-
-export const RectButton = () => {
-  return (
-    <View>
-      <Text>Rect Button</Text>
-    </View>
-  );
-};
